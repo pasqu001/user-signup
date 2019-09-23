@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <h1>User Signup</h1>
+        <div>
+            <form action="/welcome" method="post">
+                <p>
+                    <label for="name">Username:</label>
+                    <input type="text" id="name" name="username" placeholder="What Will it be?"/> {{username_error}}
+                </p>
+
+                </p>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Optional"/> {{email_error}}
+                </p>
+
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password"/> {{password_error}}
+                </p>
+
+                <p>
+                    <label for="password2">Password:</label>
+                    <input type="password" id="password2" name="password2" placeholder="Re-Enter password"/>
+                </p>
+                <p>
+                    <button type="submit" >Sign Up</button>
+                </p>
+            </form>
+        </div>
+
+{% endblock %}
