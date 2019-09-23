@@ -7,12 +7,12 @@
             <form action="/welcome" method="post">
                 <p>
                     <label for="name">Username:</label>
-                    <input type="text" id="name" name="username" placeholder="What Will it be?"/> {{username_error}}
+                    <input type="text" id="name" name="username" value='{{username}}'/> {{username_error}}
                 </p>
 
                 </p>
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" placeholder="Optional"/> {{email_error}}
+                    <input type="text" id="email" name="email" value='{{email}}'/> {{email_error}}
                 </p>
 
                 <p>

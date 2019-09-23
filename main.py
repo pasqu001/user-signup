@@ -26,7 +26,7 @@ def welcome():
         user_error = user_error + 'Username cannot be blank. '
     else:
         if name.strip(' ') != name:
-            user_error = user_error + 'Spaces are not allowed in Username. '
+            user_error = user_error + 'Spaces are not allowed in password. '
         if len(name) < 3 or len(name) > 20:
             user_error = user_error + 'Username has to be between 3 and 20 characters. '
 
@@ -50,7 +50,7 @@ def welcome():
             mail_error = mail_error + 'Email has to be between 3 and 20 characters. '
 
     if pass_error != '' or mail_error != '' or user_error != '':
-        return render_template('index.html', username_error=user_error, email_error=mail_error, password_error=pass_error)
+        return render_template('index.html', username_error=user_error, email_error=mail_error, password_error=pass_error, username=name, email=email)
 
         
         
